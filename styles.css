@@ -765,6 +765,22 @@ svg {
   color: var(--text);
 }
 
+.project__link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #e08bff, #ff8a3d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project__link:hover {
+  text-decoration: underline;
+  text-decoration-color: #ff8a3d;
+}
+
 /* ---------- Steps ---------- */
 .steps {
   display: grid;

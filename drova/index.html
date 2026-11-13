@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дровяной двор — колотые дрова с доставкой</title>
+  <meta name="description" content="Сухие колотые дрова: берёза, дуб, осина, ольха, сосна. Доставка в день заказа, расчёт стоимости онлайн. Демо-проект.">
+  <meta name="theme-color" content="#1a120d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a120d'/%3E%3Cpath d='M32 8c2 10 14 14 14 28a14 14 0 0 1-28 0c0-8 5-11 7-17 3 3 4 6 4 9 3-5 5-12 3-20z' fill='%23ff6a1a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="demo-bar">Демо-проект: цены, телефон и адрес вымышленные</div>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#top" aria-label="Дровяной двор — наверх">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4.5 7 6.5 7 13a7 7 0 0 1-14 0c0-4 2.5-5.5 3.5-8.5 1.5 1.5 2 3 2 4.5 1.5-2.5 2.5-5.500 1.500-9z"/></svg>
+        <span>Дровяной&nbsp;двор</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#prices">Цены</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <a class="header__phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="embers" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="tag">Сухие дрова с доставкой</p>
+          <h1>Дрова, которые <em>горят</em>, а не дымят</h1>
+          <p class="lead">Влажность до 18%, колотые и разложенные по складометрам. Привезём в день заказа и сложим там, где скажете.</p>
+          <div class="hero__cta">
+            <a class="btn btn--fire" href="#calc">Рассчитать стоимость</a>
+            <a class="btn btn--line" href="#prices">Смотреть цены</a>
+          </div>
+          <ul class="hero__facts">
+            <li><b>18%</b><span>влажность</span></li>
+            <li><b>1 день</b><span>доставка</span></li>
+            <li><b>от 1 м³</b><span>любой объём</span></li>
+          </ul>
+        </div>
+
+        <!-- Stylized stack of logs, drawn in SVG -->
+        <div class="hero__art" aria-hidden="true">
+          <div class="glow"></div>
+          <svg viewBox="0 0 320 260" class="logs">
+            <defs>
+              <radialGradient id="cut" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="#f1d2a0"/><stop offset=".55" stop-color="#d9a566"/><stop offset="1" stop-color="#a9743f"/>
+              </radialGradient>
+            </defs>
+            <g stroke="#3a2415" stroke-width="3">
+              <circle cx="80" cy="200" r="46" fill="url(#cut)"/><circle cx="170" cy="200" r="46" fill="url(#cut)"/><circle cx="260" cy="200" r="46" fill="url(#cut)"/>
+              <circle cx="125" cy="128" r="46" fill="url(#cut)"/><circle cx="215" cy="128" r="46" fill="url(#cut)"/>
+              <circle cx="170" cy="58" r="46" fill="url(#cut)"/>
+            </g>
+            <g fill="none" stroke="#8a5a2c" stroke-width="2" opacity=".7">
+              <circle cx="80" cy="200" r="28"/><circle cx="80" cy="200" r="12"/>
+              <circle cx="170" cy="200" r="28"/><circle cx="170" cy="200" r="12"/>
+              <circle cx="260" cy="200" r="28"/><circle cx="260" cy="200" r="12"/>
+              <circle cx="125" cy="128" r="28"/><circle cx="125" cy="128" r="12"/>
+              <circle cx="215" cy="128" r="28"/><circle cx="215" cy="128" r="12"/>
+              <circle cx="170" cy="58" r="28"/><circle cx="170" cy="58" r="12"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section">
+      <div class="wrap">
+        <div class="benefits">
+          <article class="benefit reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
+            <h3>Камерная сушка</h3>
+            <p>Дрова сохнут в сушильных камерах, поэтому дают больше тепла и не забивают дымоход сажей.</p>
+          </article>
+          <article class="benefit reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="12" height="9" rx="1"/><path d="M15 10h4l2 3v3h-6M7 19.500h.01M17 19.500h.01"/></svg>
+            <h3>Доставка в день заказа</h3>
+            <p>Привозим сами на грузовике. При заказе от 5 м³ доставка по городу бесплатная.</p>
+          </article>
+          <article class="benefit reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+            <h3>Честный объём</h3>
+            <p>Мерим складометрами, а не «кузовами». Можно перепроверить при выгрузке.</p>
+          </article>
+          <article class="benefit reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.500"/></svg>
+            <h3>Оплата при получении</h3>
+            <p>Платите после того, как увидели и приняли дрова: наличными или переводом.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prices -->
+    <section class="section section--dark" id="prices">
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="tag">Каталог</p>
+          <h2>Цены на дрова</h2>
+          <p class="note">Цена за 1 складометр (≈ 0,7 плотных м³). Чурками, то есть нерасколотыми, дешевле на 15%.</p>
+        </header>
+
+        <div class="woods">
+          <article class="wood reveal" data-wood="birch">
+            <span class="wood__chip wood__chip--birch"></span>
+            <h3>Берёза</h3>
+            <p>Горит ровно и жарко, мало дыма. Лучший выбор для печи и камина.</p>
+            <div class="wood__meta"><span>Жар: ●●●●○</span><span>Горит долго</span></div>
+            <div class="wood__price">3 200 ₽<small>/ м³</small></div>
+            <a class="btn btn--line btn--sm" href="#calc" data-pick="birch">Выбрать</a>
+          </article>
+
+          <article class="wood reveal" data-wood="oak">
+            <span class="wood__chip wood__chip--oak"></span>
+            <h3>Дуб</h3>
+            <p>Самый долгий жар и много углей. Хорош для бани и мангала.</p>
+            <div class="wood__meta"><span>Жар: ●●●●●</span><span>Горит очень долго</span></div>
+            <div class="wood__price">4 200 ₽<small>/ м³</small></div>
+            <a class="btn btn--line btn--sm" href="#calc" data-pick="oak">Выбрать</a>
+          </article>
+
+          <article class="wood reveal" data-wood="alder">
+            <span class="wood__chip wood__chip--alder"></span>
+            <h3>Ольха</h3>
+            <p>Мягкий аромат, чистый дымоход. Любят для копчения и бани.</p>
+            <div class="wood__meta"><span>Жар: ●●●○○</span><span>Горит средне</span></div>
+            <div class="wood__price">2 900 ₽<small>/ м³</small></div>
+            <a class="btn btn--line btn--sm" href="#calc" data-pick="alder">Выбрать</a>
+          </article>
+
+          <article class="wood reveal" data-wood="aspen">
+            <span class="wood__chip wood__chip--aspen"></span>
+            <h3>Осина</h3>
+            <p>Недорого, быстро разгорается, чистит дымоход от сажи.</p>
+            <div class="wood__meta"><span>Жар: ●●○○○</span><span>Горит быстро</span></div>
+            <div class="wood__price">2 300 ₽<small>/ м³</small></div>
+            <a class="btn btn--line btn--sm" href="#calc" data-pick="aspen">Выбрать</a>
+          </article>
+
+          <article class="wood reveal" data-wood="pine">
+            <span class="wood__chip wood__chip--pine"></span>
+            <h3>Сосна</h3>
+            <p>Доступный вариант для растопки и дачи. Даёт много смолы.</p>
+            <div class="wood__meta"><span>Жар: ●●○○○</span><span>Горит быстро</span></div>
+            <div class="wood__price">2 200 ₽<small>/ м³</small></div>
+            <a class="btn btn--line btn--sm" href="#calc" data-pick="pine">Выбрать</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator + order -->
+    <section class="section" id="calc">
+      <div class="wrap calc">
+        <div class="calc__panel reveal">
+          <header class="head head--tight">
+            <p class="tag">Расчёт онлайн</p>
+            <h2>Сколько это будет стоить</h2>
+          </header>
+
+          <form id="order" class="form" novalidate>
+            <div class="field">
+              <label for="wood">Порода</label>
+              <select id="wood" name="wood">
+                <option value="birch">Берёза — 3 200 ₽/м³</option>
+                <option value="oak">Дуб — 4 200 ₽/м³</option>
+                <option value="alder">Ольха — 2 900 ₽/м³</option>
+                <option value="aspen">Осина — 2 300 ₽/м³</option>
+                <option value="pine">Сосна — 2 200 ₽/м³</option>
+              </select>
+            </div>
+
+            <fieldset class="field">
+              <legend>Вид</legend>
+              <div class="seg">
+                <label><input type="radio" name="kind" value="split" checked><span>Колотые</span></label>
+                <label><input type="radio" name="kind" value="chunk"><span>Чурками (−15%)</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="volume">Объём: <b id="volume-out">3 м³</b></label>
+              <input id="volume" name="volume" type="range" min="1" max="10" step="1" value="3">
+              <div class="ticks"><span>1</span><span>5</span><span>10 м³</span></div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+              </div>
+              <div class="field">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="address">Адрес доставки</label>
+              <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Город, улица, дом">
+            </div>
+
+            <p class="form__error" id="form-error" role="alert" hidden></p>
+            <button class="btn btn--fire btn--block" type="submit">Заказать дрова</button>
+            <p class="form__hint">Нажмите, и мы подготовим заявку в Telegram. Оплата только после получения дров.</p>
+          </form>
+        </div>
+
+        <aside class="receipt reveal" aria-live="polite">
+          <h3>Ваш заказ</h3>
+          <dl>
+            <div><dt>Порода</dt><dd id="r-wood">Берёза</dd></div>
+            <div><dt>Вид</dt><dd id="r-kind">Колотые</dd></div>
+            <div><dt>Объём</dt><dd id="r-volume">3 м³</dd></div>
+            <div><dt>Цена за м³</dt><dd id="r-unit">3 200 ₽</dd></div>
+            <div><dt>Скидка за объём</dt><dd id="r-discount">−5%</dd></div>
+            <div><dt>Доставка</dt><dd id="r-delivery">500 ₽</dd></div>
+          </dl>
+          <div class="receipt__total"><span>Итого</span><b id="r-total">0 ₽</b></div>
+          <p class="receipt__note">Скидка 5% от 3 м³, 10% от 5 м³. Доставка по городу бесплатна от 5 м³.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Delivery -->
+    <section class="section section--dark" id="delivery">
+      <div class="wrap">
+        <header class="head reveal">
+          <p class="tag">Как это работает</p>
+          <h2>Заказ за четыре шага</h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span>1</span><h3>Выбираете дрова</h3><p>Породу, вид и объём. Стоимость видна сразу.</p></li>
+          <li class="step reveal"><span>2</span><h3>Оставляете заявку</h3><p>Мы перезвоним в течение 15 минут и уточним время.</p></li>
+          <li class="step reveal"><span>3</span><h3>Привозим и складываем</h3><p>Выгружаем там, где удобно, и складываем в поленницу.</p></li>
+          <li class="step reveal"><span>4</span><h3>Платите на месте</h3><p>Только после проверки объёма и качества дров.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap wrap--narrow">
+        <header class="head reveal">
+          <p class="tag">Частые вопросы</p>
+          <h2>Что обычно спрашивают</h2>
+        </header>
+        <div class="faq reveal">
+          <details open>
+            <summary>Что такое складометр?</summary>
+            <p>Это объём поленницы 1×1×1 м вместе с воздушными промежутками между поленьями. В плотных кубометрах это примерно 0,7 м³.</p>
+          </details>
+          <details>
+            <summary>Какая у дров влажность?</summary>
+            <p>Не больше 18%. Такие дрова горят жарко и почти не оставляют сажи. Влажность можно проверить влагомером при выгрузке.</p>
+          </details>
+          <details>
+            <summary>Куда вы доставляете?</summary>
+            <p>По городу и ближайшему пригороду. Стоимость доставки за город считаем по расстоянию, уточняйте по телефону.</p>
+          </details>
+          <details>
+            <summary>Можно заказать меньше одного кубометра?</summary>
+            <p>Да, но только по договорённости: небольшие заказы собираем в маршрут с другими доставками.</p>
+          </details>
+          <details>
+            <summary>Как оплатить?</summary>
+            <p>После получения: наличными водителю или переводом по номеру телефона. Предоплата не нужна.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final call -->
+    <section class="cta">
+      <div class="embers embers--small" aria-hidden="true"></div>
+      <div class="wrap cta__inner reveal">
+        <h2>Холодно? Привезём тепло сегодня</h2>
+        <p>Позвоните или оставьте заявку, мы быстро ответим.</p>
+        <div class="hero__cta">
+          <a class="btn btn--fire" href="tel:+70000000000">+7 (000) 000-00-00</a>
+          <a class="btn btn--line" href="#calc">Рассчитать стоимость</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span id="year">2026</span> Дровяной двор · демо-проект</span>
+      <span>Сайт сделал <a href="https://t.me/onlyrofles" target="_blank" rel="noopener">ONLYROFLES</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
