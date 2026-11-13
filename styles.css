@@ -686,10 +686,11 @@ svg {
 }
 
 /* Placeholder covers: gradient blobs until real screenshots exist */
+/* Real screenshot of the finished landing, slightly dimmed so the label stays readable */
 .project__cover--a {
   background:
-    radial-gradient(60% 80% at 25% 30%, rgba(182, 0, 168, 0.55), transparent 70%),
-    radial-gradient(60% 70% at 80% 80%, rgba(118, 33, 176, 0.5), transparent 70%),
+    linear-gradient(rgba(12, 12, 12, 0.3), rgba(12, 12, 12, 0.3)),
+    url("img/drova-cover.png") center / cover no-repeat,
     #120815;
 }
 
@@ -708,12 +709,14 @@ svg {
 }
 
 .project__cover span {
-  padding: 8px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 9px 24px;
+  border: 2px solid transparent;
   border-radius: 999px;
-  background: rgba(12, 12, 12, 0.45);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  /* Dark fill inside, bright brand gradient on the border, soft glow outside */
+  background:
+    linear-gradient(#0c0c0c, #0c0c0c) padding-box,
+    linear-gradient(120deg, #e08bff, #b600a8 45%, #ff8a3d) border-box;
+  box-shadow: 0 0 18px rgba(182, 0, 168, 0.55), 0 6px 18px rgba(0, 0, 0, 0.5);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.14em;
