@@ -694,10 +694,11 @@ svg {
     #120815;
 }
 
+/* Real screenshot of the bot chat */
 .project__cover--b {
   background:
-    radial-gradient(60% 80% at 75% 25%, rgba(190, 76, 0, 0.5), transparent 70%),
-    radial-gradient(60% 70% at 20% 80%, rgba(182, 0, 168, 0.45), transparent 70%),
+    linear-gradient(rgba(12, 12, 12, 0.3), rgba(12, 12, 12, 0.3)),
+    url("img/barber-cover.png") center / cover no-repeat,
     #150a0a;
 }
 

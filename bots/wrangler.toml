@@ -1,0 +1,22 @@
+name = "telegram-bots-demo"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Reminders for the barbershop bot are checked every 30 minutes
+[triggers]
+crons = ["*/30 * * * *"]
+
+# Static files (the menu banner) are served from ./public
+[assets]
+directory = "./public"
+
+[vars]
+# Shop time zone as offset from UTC in minutes (180 = Moscow)
+TZ_OFFSET_MIN = "180"
+BANNER_URL = "https://telegram-bots-demo.telegram-bots-demo.workers.dev/barber-banner.png"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bots-db"
+# Paste the id printed by: npx wrangler d1 create bots-db
+database_id = "6b2c9a34-1d98-4a8e-a78a-360ba06fd55b"

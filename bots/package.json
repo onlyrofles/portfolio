@@ -1,0 +1,16 @@
+{
+  "name": "telegram-bots-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Demo Telegram bot for barbershop appointments on Cloudflare Workers",
+  "scripts": {
+    "test": "node test/run.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "webhooks": "node scripts/set-webhooks.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
