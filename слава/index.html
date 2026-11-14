@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кухни на заказ — изготовление кухонной мебели</title>
+  <meta name="description" content="Изготовление кухонной мебели на заказ: бесплатный замер, дизайн-проект, собственное производство. Узнайте стоимость кухни за минуту.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Neucha&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="header" id="header">
+  <div class="container header__in">
+    <a class="logo" href="#top" aria-label="По месту — на главную"><span class="logo__top"><svg viewBox="0 0 24 28" aria-hidden="true"><path d="M2 28V2h20v26"/><path class="shelf" d="M2 11h20"/></svg><span aria-hidden="true">О</span></span><span class="logo__bot" aria-hidden="true">МЕСТУ</span></a>
+    <nav class="nav" id="nav">
+      <a href="#advantages">Преимущества</a>
+      <a href="#works">Наши работы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#about">О нас</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header__tel">
+      <a href="tel:+77081498620">8 708 149 86 20</a>
+      <a class="header__call" href="#calc">Заказать звонок</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="container hero__in">
+      <div class="hero__text">
+        <h1>Изготовление <b>кухонной мебели</b> на заказ</h1>
+        <p>Позвоните сейчас и получите скидку или бесплатную установку</p>
+        <a class="btn" href="#calc">Узнать стоимость</a>
+      </div>
+      <div class="hero__img" role="img" aria-label="Синяя кухня с островом и барными стульями"></div>
+    </div>
+    <a class="scroll-hint" href="#calc">Листай вниз</a>
+  </section>
+
+  <!-- 2. Calculator on cream background -->
+  <section class="cream" id="calc">
+    <div class="container cream__in">
+      <div class="cream__text">
+        <h2>Узнайте <b>стоимость</b> вашей кухни</h2>
+        <ol class="hand-steps">
+          <li>Получить полный расчёт стоимости</li>
+          <li>Узнать точные сроки работ</li>
+          <li>Отправим смету в этот же день</li>
+        </ol>
+      </div>
+
+      <form class="card" id="order" novalidate>
+        <h3>Оставьте заявку для расчёта сметы</h3>
+        <p class="card__hint">Мы перезвоним вам в течение 20 минут</p>
+
+        <label class="f">Планировка
+          <select name="layout">
+            <option value="straight">Прямая</option>
+            <option value="corner" selected>Угловая</option>
+            <option value="u">П-образная</option>
+            <option value="island">С островом</option>
+          </select>
+        </label>
+        <label class="f">Длина кухни: <b id="length-out">3 м</b>
+          <input type="range" name="size" min="2" max="8" step="0.5" value="3">
+        </label>
+        <label class="f">Фасады
+          <select name="facade">
+            <option value="ldsp">ЛДСП</option>
+            <option value="film" selected>МДФ в плёнке</option>
+            <option value="enamel">МДФ в эмали</option>
+            <option value="wood">Массив дерева</option>
+          </select>
+        </label>
+        <label class="f">Столешница
+          <select name="top">
+            <option value="post">Постформинг</option>
+            <option value="acryl" selected>Искусственный камень</option>
+            <option value="quartz">Кварцевый агломерат</option>
+          </select>
+        </label>
+
+        <p class="card__total"><span>Ориентировочно</span><b id="r-total"></b></p>
+
+        <input class="line" name="name" autocomplete="name" placeholder="Ваше имя" aria-label="Ваше имя">
+        <input class="line" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" aria-label="Телефон">
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <button class="btn btn--block" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 3. 10 years -->
+  <section class="dark" id="advantages">
+    <div class="container years">
+      <h2>Более <b>10 лет</b> занимаемся изготовлением кухонной мебели</h2>
+      <ul class="cross reveal">
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26h20M9 26V12l7-6 7 6v14M13 26v-8h6v8"/></svg>Европейское качество материалов</li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="5"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4M8 8l3 3M21 21l3 3M24 8l-3 3M11 21l-3 3"/></svg>Собственное производство</li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="6" width="22" height="20" rx="2"/><path d="M5 13h22M11 19h10"/></svg>Больше 500 установленных кухонь</li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27l4-1L26 9l-3-3L6 23zM21 8l3 3"/></svg>Бесплатный выезд, замер и дизайн-проект</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Projects mosaic -->
+  <section class="white" id="works">
+    <div class="container">
+      <h2 class="dark-text">Выполнили <b>584 проекта</b></h2>
+      <div class="mosaic">
+        <article class="tile tile--wide t1 reveal"><h3>Скандинавский стиль <small>(44 кв.м.)</small></h3><p><span>5 дней</span><span>560 000 ₸</span></p></article>
+        <article class="tile t2 reveal"><h3>Современная кухня <small>(34 кв.м.)</small></h3><p><span>6 дней</span><span>950 000 ₸</span></p></article>
+        <article class="tile t3 reveal"><h3>Кухня в стиле ретро <small>(46 кв.м.)</small></h3><p><span>4 дня</span><span>730 000 ₸</span></p></article>
+        <article class="tile t4 reveal"><h3>Современная кухня <small>(55 кв.м.)</small></h3><p><span>9 дней</span><span>1 000 000 ₸</span></p></article>
+        <article class="tile t5 reveal"><h3>Кухня в стиле минимализма <small>(48 кв.м.)</small></h3><p><span>6 дней</span><span>810 000 ₸</span></p></article>
+        <article class="tile t6 reveal"><h3>Кухня в стиле модерн <small>(39 кв.м.)</small></h3><p><span>5 дней</span><span>1 040 000 ₸</span></p></article>
+        <article class="tile t7 reveal"><h3>Кухня в стиле хай-тек <small>(36 кв.м.)</small></h3><p><span>8 дней</span><span>1 310 000 ₸</span></p></article>
+      </div>
+      <p class="note">Названия, площади, сроки и цены — примеры. Здесь будут реальные работы клиента.</p>
+    </div>
+  </section>
+
+  <!-- 5. Catalog request -->
+  <section class="white white--catalog" id="catalog">
+    <div class="container catalog">
+      <div>
+        <h2 class="dark-text">Получите <b>каталог</b> наших кухонь</h2>
+        <p class="dark-text muted">Отправим подборку с ценами на почту.</p>
+        <form class="catalog__form" id="catalog-form" novalidate>
+          <input class="line line--dark" name="email" type="email" autocomplete="email" placeholder="example@mail.ru" aria-label="Электронная почта">
+          <p class="form-error" id="catalog-error" role="alert" hidden></p>
+          <button class="btn" type="submit">Получить каталог</button>
+        </form>
+      </div>
+      <div class="book" aria-hidden="true"><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- 6. Reviews -->
+  <section class="dark" id="reviews">
+    <div class="container reviews">
+      <div>
+        <h2>Рекомендации <span class="thin">наших клиентов</span></h2>
+        <figure class="review" id="review">
+          <div class="avatar" aria-hidden="true"></div>
+          <blockquote>
+            <p id="review-text"></p>
+            <footer id="review-author"></footer>
+          </blockquote>
+        </figure>
+        <div class="slider">
+          <button type="button" id="prev" aria-label="Предыдущий отзыв">←</button>
+          <button type="button" id="next" aria-label="Следующий отзыв">→</button>
+          <span id="review-count"></span>
+        </div>
+      </div>
+      <div class="lamp" aria-hidden="true"><p>Так же можете зайти на наш видеоканал и посмотреть процесс работы на реальных заказах</p></div>
+    </div>
+  </section>
+
+  <!-- 7. Brands -->
+  <section class="white white--brands" id="about">
+    <div class="container brands">
+      <p>Мы сотрудничаем с брендами</p>
+      <ul>
+        <li>BRAND</li><li>BRAND</li><li>BRAND</li><li>BRAND</li><li>BRAND</li><li>BRAND</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8. Contacts -->
+  <section class="dark" id="contacts">
+    <div class="container contacts">
+      <div>
+        <h2>Контакты</h2>
+        <p class="lbl">Офис:</p>
+        <p>Город, улица, дом (заглушка)</p>
+        <p class="lbl">Производство:</p>
+        <p>Город, улица, дом (заглушка)</p>
+        <p class="lbl">Телефон:</p>
+        <p><a href="tel:+77081498620">8 708 149 86 20</a></p>
+      </div>
+      <div class="map" role="img" aria-label="Карта (заглушка)"><span class="pin">ПМ</span></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__in">
+    <a class="logo logo--dark" href="#top" aria-label="По месту — наверх"><span class="logo__top"><svg viewBox="0 0 24 28" aria-hidden="true"><path d="M2 28V2h20v26"/><path class="shelf" d="M2 11h20"/></svg><span aria-hidden="true">О</span></span><span class="logo__bot" aria-hidden="true">МЕСТУ</span></a>
+    <p>ИНН: 0000000000<br>ОГРН: 0000000000000</p>
+    <p><a href="#">Политика конфиденциальности</a><br>© <span id="year"></span></p>
+    <p><a href="tel:+77081498620">8 708 149 86 20</a><br><a href="#calc">Заказать звонок</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
